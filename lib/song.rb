@@ -40,7 +40,6 @@ class Song
     @@count
   end
 
-  for each @artist put in @@artists
 
 
 end
