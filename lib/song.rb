@@ -45,12 +45,19 @@ class Song
     @@artists.uniq
   end
 
-  def self.genres
-    @@genres.uniq
+  def self.genre_count
+    artist_count = {}
+    @@artists.each do |artist|
+      if artist_count[artist]
+        artist_count[artist] +=1
+      else
+        artist_count[artist]
+      end
+    end
   end
 
-  def self.genre_count
-    
+  def self.genres
+    @@genres.uniq
   end
 
   def self.artist_count
